@@ -1147,8 +1147,12 @@ h3.aside-title {
   color: #000;
 }
 
-.post, .archive, .sidebar {
+.post {
   margin-top: 30px;
+}
+
+.archive, .sidebar {
+  margin-top: 5px;
 }
 
 .header {
