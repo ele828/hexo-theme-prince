@@ -1,9 +1,10 @@
-extends _partial/layout.jade
+extends _partial/layout
 
 block container
-  include mixins/post
-  +posts()
+    div.header
+        h2.quotes
+    include mixins/post
+    +postList()
 
-block pagination
-  include mixins/paginator
-  +index()
+block aside
+    include _partial/aside

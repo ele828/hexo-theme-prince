@@ -1,27 +1,21 @@
 #header
-name: SHAW
-description: Keep it short. Keep it simple.
-favicon: /fav.png
-ga: ''
+name: ERIC HUANG
+description: Passionate Web Developer.
+favicon: /img/favicon.png
+ga: 'UA-79167899-1'
 
 #nav
 nav:
-    HOME: /
-    ARCHIVE: /archives/
+    ARCHIVE: /
     GALLERY:  /gallery/
     ABOUT: /about/
 
 #post
 excerpt_link: Continue Reading
 
-
-#about me
-aboutMeImg: /aboutme.jpg
-
-github: https://github.com/yiliashaw
-twitter: https://twitter.com/YiliaShaw
-weibo: http://weibo.com/kathleenxiao
+github: https://github.com/ele828
+weibo: http://weibo.com/ele828
+linkedin: http://cn.linkedin.com/in/ele828/en
 
 #copyright
 themeLink: https://github.com/yiliashaw/hexo-theme-prince
-

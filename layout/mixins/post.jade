@@ -33,13 +33,14 @@ mixin posts()
     - })
 
 mixin post(page)
+  div.header
+    -var title = page.title !== '' ? page.title:__('no title')
+    h1.post-title
+      != title
+    +postInfo(page)
   .post
     article.post-block
       +postPhotos(page)
-      -var title = page.title !== '' ? page.title:__('no title')
-      h1.post-title
-        != title
-      +postInfo(page)
       .post-entry
         != page.content
       if (page.tags && page.tags.length >0)
