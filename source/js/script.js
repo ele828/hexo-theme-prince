@@ -1,21 +1,15 @@
 var quoteEndpoint = "https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
-function initQuotes(count) {
-  // Avoid deep recursive
-  if (count > 10) {
-    $(".quotes").text("Make things that really matter.");
-    return;
-  }
+function initQuotes() {
   // If in homepage, fetches quotes
-  $.getJSON(quoteEndpoint).then(r => {
-    var quotes = r.quoteText;
-    if (!quotes || quotes.length > 60 || quotes.length <= 0) {
-      initQuotes(++count);
-    } else {
-      $(".quotes").text(quotes);
+  return $.getJSON(quoteEndpoint).then(r => {
+    const quote = r.quoteText;
+    if (!quote || quote.length > 150) {
+      return initQuotes();
     }
+    $(".quotes").text(r.quoteText);
   });
 }
-initQuotes(0);
+initQuotes();
 
 function init() {
   $('.post-block p img').each(function () {

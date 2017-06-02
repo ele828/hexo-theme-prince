@@ -282,6 +282,13 @@ h1.prince-log a {
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    padding: 80px 150px;
+    box-shadow: 0px 0px 60px 60px #fff inset !important;
+  }
+  .header .quotes {
+    display: block !important;
+  }
   ul.main-nav-items {
     float: right;
     margin-right: 15px;
@@ -1159,14 +1166,18 @@ h3.aside-title {
   overflow: hidden;
   width: 100%;
   height: 300px;
-  border-radius: 5px;
-  background: url("https://unsplash.it/1500/300?random");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://unsplash.it/1500/300?random"), #eee;
   background-size: cover;
+  box-shadow: 0px 0px 10px 10px #fff inset;
 }
 
-.header h2.quotes {
-  margin-top: 120px;
+.header .quotes {
+  display: none;
 }
+
 .header h1, .header .post-info, .header .quotes {
   text-shadow: 0px 2px 3px black;
   text-align: center;
@@ -1174,6 +1185,5 @@ h3.aside-title {
   color: #fff;
 }
 .header h1 {
-  margin-top: 100px;
   font-size: 2.5em;
 }

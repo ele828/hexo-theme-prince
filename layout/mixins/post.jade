@@ -34,10 +34,11 @@ mixin posts()
 
 mixin post(page)
   div.header
-    -var title = page.title !== '' ? page.title:__('no title')
-    h1.post-title
-      != title
-    +postInfo(page)
+    div
+      -var title = page.title !== '' ? page.title:__('no title')
+      h1.post-title
+        != title
+      +postInfo(page)
   .post
     article.post-block
       +postPhotos(page)
